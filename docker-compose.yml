@@ -1,0 +1,25 @@
+version: '3'
+
+services: 
+
+  jenkins_server:
+    build:
+      context: ./jenkins
+      # dockerfile: Dockerfile
+    image: hariomsaini/jenkins
+    hostname: jenkins.server
+    # container_name: 
+    ports:
+      - 8080:8080
+      - 50000:50000
+    volumes:
+      - "jenkins_home:/var/jenkins_home"
+    networks: 
+      - netgen
+
+networks: 
+  netgen:
+    driver: bridge
+
+volumes:
+  jenkins_home:
