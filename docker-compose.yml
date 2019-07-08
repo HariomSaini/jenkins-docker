@@ -8,12 +8,15 @@ services:
       # dockerfile: Dockerfile
     image: hariomsaini/jenkins
     hostname: jenkins.server
-    # container_name: 
+    container_name: jenkins 
     ports:
       - 8080:8080
       - 50000:50000
     volumes:
       - "jenkins_home:/var/jenkins_home"
+      - "$HOME/testmvn:/home/testmvn"
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - "/usr/bin/docker:/usr/bin/docker"
     networks: 
       - netgen
 
