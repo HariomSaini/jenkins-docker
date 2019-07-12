@@ -1,4 +1,5 @@
 FROM jenkins/jenkins
+# FROM jenkinsci/blueocean 
 
 MAINTAINER hariomsaini0011@gmail.com
 

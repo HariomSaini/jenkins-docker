@@ -1,1 +1,1 @@
-Docker compose for jenkins
+composing jenkins
