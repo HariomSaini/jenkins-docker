@@ -1,1 +1,1 @@
-composing jenkins
+A Composer for Jenkins
